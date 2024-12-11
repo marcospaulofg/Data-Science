@@ -6,7 +6,7 @@ O objetivo deste projeto é criar e avaliar um modelo de Deep Learning capaz de 
 
 - Descrição do problema:
 
-A diversidade visual, como formas, tamanhos e cores variadas entre as frutas é um dos desafios da classificação de frutas por imagens. Além disso, frutas com características visuais semelhantes (por exemplo, maçã e pêra) apresentam maior complexidade para serem diferenciadas. O modelo deve ser capaz de generalizar bem mesmo com essas dificuldades.
+A diversidade visual, como formas, tamanhos e cores variadas entre as frutas é um dos desafios da classificação de frutas por imagens. Além disso, frutas com características visuais semelhantes (por exemplo, maçã e pera) apresentam maior complexidade para serem diferenciadas. O modelo deve ser capaz de generalizar bem mesmo com essas dificuldades.
 
 - Premissas:
 
