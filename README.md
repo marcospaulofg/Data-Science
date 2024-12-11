@@ -1,5 +1,5 @@
 # Data-Science
-Projetos em Python para Ciência de dados criados por marcospaulofg.
+Projeto em Python de Ciência de dados criado por marcospaulofg.
 - Objetivo:
 
 O objetivo deste projeto é criar e avaliar um modelo de Deep Learning capaz de identificar e classificar diferentes tipos de frutas a partir de imagens. A ideia desse modelo é ser um protótipo de identificação de frutas em caixas de mercados.
@@ -20,4 +20,4 @@ O dataset é variado para todas as frutas, para capturar a diversidade de cada u
 
 - Descrição do Dataset:
 
-O dataset é composto por imagens de frutas categorizadas em 15 classes: Apple, Banana, Carambola, Guava, Kiwi, Mango, Muskmelon, Orange, Peach, Pear, Persimmon, Pitaya, Plum, Pomegranet, Tamotoes. O rótulo das frutas estão no próprio nome do arquivo e em inglês. As imagens são coloridas. Como já mencionado anteriormente, as frutas estão em uma bandeja de alumínio e em diversas posições diferentes.
+O dataset é composto por 1.000 imagens de frutas categorizadas em 15 classes: Apple, Banana, Carambola, Guava, Kiwi, Mango, Muskmelon, Orange, Peach, Pear, Persimmon, Pitaya, Plum, Pomegranet, Tamotoes. O rótulo das frutas estão no próprio nome do arquivo e em inglês. As imagens são coloridas. Como já mencionado anteriormente, as frutas estão em uma bandeja de alumínio e em diversas posições diferentes.
