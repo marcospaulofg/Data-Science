@@ -7,21 +7,21 @@ O MVP é uma versão simplificada de um produto ou projeto, desenvolvida com o m
 ## Objetivo do Repositório
 Este repositório tem como objetivo:
 
-• Compartilhar conhecimento: Disponibilizar projetos acadêmicos para que outros estudantes possam aprender, colaborar ou se inspirar, incentivando a troca de ideias entre a comunidade acadêmica.
+• **Compartilhar conhecimento**: Disponibilizar projetos acadêmicos para que outros estudantes possam aprender, colaborar ou se inspirar, incentivando a troca de ideias entre a comunidade acadêmica.
 
-• Documentar o processo: Registrar o desenvolvimento de cada projeto, desde a concepção até a entrega do MVP, incluindo desafios, soluções e aprendizados.
+• **Documentar o processo**: Registrar o desenvolvimento de cada projeto, desde a concepção até a entrega do MVP, incluindo desafios, soluções e aprendizados.
 
 ## Estrutura do Repositório
 Cada projeto está organizado em uma pasta separada, contendo:
 
-• README.md: Descrição detalhada do projeto, incluindo objetivos, metodologia, tecnologias utilizadas e resultados.
+• **README.md**: Descrição detalhada do projeto, incluindo objetivos, metodologia, tecnologias utilizadas e resultados.
 
-• Código-fonte: Arquivos necessários para reproduzir ou expandir o projeto.
+• **Código-fonte**: Arquivos necessários para reproduzir ou expandir o projeto.
 
 ## Projetos Disponíveis
 Aqui estão alguns dos projetos disponíveis neste repositório:
 
-[Projeto 1 - Classificação de imagens]: O objetivo deste projeto é criar e avaliar um modelo de Deep Learning capaz de identificar e classificar diferentes tipos de frutas a partir de imagens. A ideia desse modelo é ser um protótipo de identificação de frutas em caixas de mercados. 🍎
+**Projeto 1 - Classificação de imagens**: O objetivo deste projeto é criar e avaliar um modelo de Deep Learning capaz de identificar e classificar diferentes tipos de frutas a partir de imagens. A ideia desse modelo é ser um protótipo de identificação de frutas em caixas de mercados. 🍎
 
 [Projeto 2]: Em breve um projeto de Engenharia de Dados.
 
