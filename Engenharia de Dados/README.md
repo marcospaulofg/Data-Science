@@ -1,8 +1,6 @@
-# MVP - Engenharia de Dados
-## Análise de índices de mortalidade no Brasil
+# MVP - Engenharia de Dados<br>Análise de índices de mortalidade no Brasil
 
 # 1️⃣ Objetivo
-_____
 
 Este MVP tem como objetivo construir um pipeline de dados na nuvem para analisar dados de mortalidade no Brasil, utilizando tecnologias em nuvem com Databricks e seu Delta Lake. O pipeline envolverá as etapas de busca, coleta, modelagem, carga e análise dos dados, com o propósito de fornecer insights sobre padrões de mortalidade no país.
 
@@ -36,13 +34,9 @@ O problema central que este MVP busca resolver é a falta de uma visão consolid
 
 14) Qual é a distribuição de óbitos por causas relacionadas ao trabalho?
 
-
-
 Ao final do projeto, espera-se entregar uma base de dados confiável com análises que contribuam para a compreensão dos fatores que impactam a mortalidade no Brasil.
 
 # 2️⃣ Fonte dos Dados e Coleta
-___
-
 
 Os dados utilizados neste projeto foram obtidos de fontes oficiais e públicas, portanto há problemas com a confidencialidade destes dados. A base principal é o Sistema de Informações sobre Mortalidade (SIM), que contém registros detalhados sobre óbitos ocorridos no Brasil. Foram coletados os dados entre os anos de 2006 e 2024.
 
@@ -89,12 +83,10 @@ Para relacionar os óbitos às respectivas localidades, foi utilizada a tabela d
   Essas tabelas foram projetadas para servir de referência às respectivas colunas na base de mortalidade geral, garantindo a integridade dos dados no processo analítico.
 
 # 3️⃣ Modelagem e Catálogo de Dados
-___
 
 Para estruturar e organizar os dados de forma eficiente, foi adotado o Esquema Estrela, um dos modelos mais utilizados em Data Warehousing e Business Intelligence.
 
 ## 3.1 Estrutura do Esquema Estrela
-
 
 O esquema estrela do projeto foi construído com uma tabela fato principal contendo os registros de mortalidade e 7 tabelas dimensão para compor as análises. A estrutura ficou organizada da seguinte forma:
 
@@ -107,7 +99,6 @@ O esquema estrela do projeto foi construído com uma tabela fato principal conte
   - Foram criadas tabelas auxiliares para armazenar descrições de variáveis categóricas e facilitar a análise por meio de junções (joins) entre as tabelas.
 
 ## 3.2 Catálogo de Dados
-
 
 Tabela `mortalidade_geral`:
 
@@ -213,7 +204,7 @@ Idade do falecido em minutos, horas, dias, meses ou anos. Composto de duas colun
 - Tamanho: 1
 - Valores possíveis: 1; 2; 9.
 - FK de `COD_SEXO` da tabela `sexo`.
-
+___
 
 Tabela `cid_10`:
 
@@ -232,6 +223,7 @@ Relaciona os códigos da CID-10 com a descrição das doenças e causas de morta
 - Tamanho: de 5 a 114.
 - Valores possíveis: 'Cólera devida a Vibrio cholerae 01, biótipo cholerae', 'Febre paratifóide A' e 'Botulismo'.
 
+___
 
 Tabela `circunstancia`:
 
@@ -250,7 +242,8 @@ Relaciona o código do tipo de morte com sua descrição. Suas colunas são:
 - Tamanho: de 6 a 9.
 - Valores possíveis: acidente, suicídio, homicídio, outras circunstâncias ou ignorado.
 
-%md
+___
+
 Tabela `municipios`:
 
 Contém os códigos e nomes dos municípios e estados do Brasil. Suas colunas são:
@@ -274,6 +267,7 @@ Contém os códigos e nomes dos municípios e estados do Brasil. Suas colunas s�
 - Tamanho: 2
 - Valores possíveis: ex: RJ, SP, MG.
 
+___
 
 Tabela `estado_civil`:
 
@@ -293,6 +287,7 @@ Armazena o código e sua descrição de estado civil. Suas colunas são:
 - Tamanho: de 5 a 33.
 - Valores possíveis: Solteiro; Casado; Viúvo; Separado judicialmente/divorciado; União estável; Ignorado.
 
+___
 
 Tabela `sexo`:
 
@@ -312,6 +307,7 @@ Relaciona o sexo do falecido com seu código. Suas colunas são:
 - Tamanho: de 8 a 9.
 - Valores possíveis: Masculino; Feminino Ignorado.
 
+___
 
 Tabela `cor`:
 
@@ -330,6 +326,7 @@ Relaciona a raça/cor do falecido com seu código. Suas colunas são:
 - Tamanho: de 5 a 9.
 - Valores possíveis: Branca; Preta; Amarela; Parda; Indígena.
 
+___
 
 Tabela `local_obito`:
 
@@ -347,4 +344,3 @@ Relaciona o código do local de óbito com sua descrição. Suas colunas são:
 - Datatype: string.
 - Tamanho: de 6 a 32.
 - Valores possíveis: Hospital; Outros estabelecimentos de saúde; Domicílio; Via pública; Outros; Aldeia indígena; Ignorado.
-
