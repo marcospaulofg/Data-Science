@@ -213,3 +213,138 @@ Idade do falecido em minutos, horas, dias, meses ou anos. Composto de duas colun
 - Tamanho: 1
 - Valores possíveis: 1; 2; 9.
 - FK de `COD_SEXO` da tabela `sexo`.
+
+
+Tabela `cid_10`:
+
+Relaciona os códigos da CID-10 com a descrição das doenças e causas de mortalidade. Sua colunas são:
+
+`SUBCAT` (PK):
+- Descrição: Código da causa da morte na declaração de óbito.
+- Datatype: string.
+- Tamanho: de 3 a 4.
+- Valores possíveis: códigos CID-10, onde o primeiro caracter é uma letra e o restante um número, por ex: 'A012', 'T71' e 'U049'.
+- Relacionamento: `mortalidade_geral.CAUSABAS = cid_10.SUBCAT`
+
+`DESCRICAO`: 
+- Descrição: Descrição da causa da morte na declaração de óbito.
+- Datatype: string.
+- Tamanho: de 5 a 114.
+- Valores possíveis: 'Cólera devida a Vibrio cholerae 01, biótipo cholerae', 'Febre paratifóide A' e 'Botulismo'.
+
+
+Tabela `circunstancia`:
+
+Relaciona o código do tipo de morte com sua descrição. Suas colunas são:
+
+`COD_CIRC` (PK):
+- Descrição: Código do tipo de morte violenta ou circunstâncias em que se deu a morte não natural.
+- Datatype: string
+- Tamanho: 1
+- Valores possíveis: 1; 2; 3; 4; 9.
+- Relacionamento: `mortalidade_geral.CIRCOBITO = circunstancia.COD_CIRC`
+
+`DESCR_CIRC`:
+- Descrição: Descrição do tipo de morte.
+- Datatype: string.
+- Tamanho: de 6 a 9.
+- Valores possíveis: acidente, suicídio, homicídio, outras circunstâncias ou ignorado.
+
+%md
+Tabela `municipios`:
+
+Contém os códigos e nomes dos municípios e estados do Brasil. Suas colunas são:
+
+`CODMUN` (PK):
+- Descrição: Código relativo ao município onde ocorreu o óbito.
+- Datatype: string
+- Tamanho: 6
+- Valores possíveis: códigos formados por números, ex: '110010', '110037' e '110020'.
+- Relacionamento: `mortalidade_geral.CODMUNOCOR = municipios.CODMUN`
+
+`MUNICIPIO`:
+- Descrição: Nome do município onde ocorreu o óbito.
+- Datatype: string
+- Tamanho: de 3 a 32
+- Valores possíveis: ex: Guajará-Mirim, Alto Alegre dos Parecis, Rio de Janeiro.
+
+`UF`:
+- Descrição: Código do estado onde ocorreu o óbito.
+- Datatype: string
+- Tamanho: 2
+- Valores possíveis: ex: RJ, SP, MG.
+
+
+Tabela `estado_civil`:
+
+Armazena o código e sua descrição de estado civil. Suas colunas são:
+
+`COD_ESTCIVIL` (PK):
+- Descrição: Código da situação conjugal do falecido informada pelos familiares.
+- Datatype: string.
+- Tamanho: 1
+- Valores possíveis: 1; 2; 3; 4; 5; 9.
+- Relacionamento: `mortalidade_geral.ESTCIV = estado_civil.COD_ESTCIVIL`
+
+
+`DESCR_ESTADO`:
+- Descrição: Descrição da situação conjugal do falecido informada pelos familiares.
+- Datatype: string.
+- Tamanho: de 5 a 33.
+- Valores possíveis: Solteiro; Casado; Viúvo; Separado judicialmente/divorciado; União estável; Ignorado.
+
+
+Tabela `sexo`:
+
+Relaciona o sexo do falecido com seu código. Suas colunas são:
+
+`COD_SEXO` (PK):
+- Descrição: Código do sexo do falecido.
+- Datatype: string.
+- Tamanho: 1
+- Valores possíveis: 1; 2; 9.
+- Relacionamento: `mortalidade_geral.SEXO = sexo.COD_SEXO`
+
+`DESCR_SEXO`:
+
+- Descrição: Sexo do falecido.
+- Datatype: string.
+- Tamanho: de 8 a 9.
+- Valores possíveis: Masculino; Feminino Ignorado.
+
+
+Tabela `cor`:
+
+Relaciona a raça/cor do falecido com seu código. Suas colunas são:
+
+`COD_COR` (PK):
+- Descrição: Código da cor informada pelo responsável pelas informações do falecido.
+- Datatype: string.
+- Tamanho: 1
+- Valores possíveis: 1; 2; 3; 4; 5; 9.
+- Relacionamento: `mortalidade_geral.RACACOR = cor.COD_COR`
+
+`DESCR_COR`:
+- Descrição: Cor/raça do falecido.
+- Datatype: string.
+- Tamanho: de 5 a 9.
+- Valores possíveis: Branca; Preta; Amarela; Parda; Indígena.
+
+
+Tabela `local_obito`:
+
+Relaciona o código do local de óbito com sua descrição. Suas colunas são:
+
+`COD_LOCAL` (PK):
+- Descrição: Código do local de ocorrência do óbito.
+- Datatype: string.
+- Tamanho: 1.
+- Valores possíveis: 1; 2; 3; 4; 5; 6; 9.
+- Relacionamento: `mortalidade_geral.LOCOCOR = local_obito.COD_LOCAL`
+
+`DESCR_LOCAL`:
+- Descrição: Descrição do local de óbito.
+- Datatype: string.
+- Tamanho: de 6 a 32.
+- Valores possíveis: Hospital; Outros estabelecimentos de saúde; Domicílio; Via pública; Outros; Aldeia indígena; Ignorado.
+
