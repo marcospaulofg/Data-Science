@@ -23,7 +23,7 @@ Aqui estão alguns dos projetos disponíveis neste repositório:
 
 **Projeto 1 - Classificação de imagens**: O objetivo deste projeto é criar e avaliar um modelo de Deep Learning capaz de identificar e classificar diferentes tipos de frutas a partir de imagens. A ideia desse modelo é ser um protótipo de identificação de frutas em caixas de mercados. 🍎
 
-[Projeto 2]: Em breve um projeto de Engenharia de Dados.
+**Projeto 2 - Análise de índices de mortalidade no Brasil**: Este projeto tem como objetivo construir um pipeline de dados na nuvem para analisar dados de mortalidade no Brasil, utilizando tecnologias em nuvem com Databricks e seu Delta Lake. O pipeline envolverá as etapas de busca, coleta, modelagem, carga e análise dos dados, com o propósito de fornecer insights sobre padrões de mortalidade no país. 💀
 
 [Projeto 3]: Em breve um projeto de Análise de Dados.
 
