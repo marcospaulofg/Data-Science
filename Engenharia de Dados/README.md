@@ -92,13 +92,13 @@ Para estruturar e organizar os dados de forma eficiente, foi adotado o Esquema E
 
 O esquema estrela do projeto foi construído com uma tabela fato principal contendo os registros de mortalidade e 7 tabelas dimensão para compor as análises. A estrutura ficou organizada da seguinte forma:
 
- 📊 Tabela Fato: mortalidade_geral_gold
+ 📊 Tabela Fato: `mortalidade_geral_gold`
   
   - Esta tabela contém os registros de óbitos e é o núcleo central do esquema. Cada linha representa um óbito registrado, com detalhes como data, local, causa da morte e características da pessoa falecida.
 
   📊 Tabelas Dimensão:
 
-  - Foram criadas tabelas auxiliares para armazenar descrições de variáveis categóricas e facilitar a análise por meio de junções (joins) entre as tabelas.
+  - Foram criadas tabelas auxiliares para armazenar descrições de variáveis categóricas e facilitar a análise por meio de junções (joins) entre as tabelas. São elas: `municipios_gold`, `cid_10_gold`, `circunstancia_gold`, `local_obito_gold`, `estado_civil_gold`, `sexo_gold` e `cor_gold`.
 
 ## 3.2 Catálogo de Dados
 
@@ -208,58 +208,55 @@ _____
 erDiagram
     %% Entidades (Tabelas de Dimensão)
     municipios_gold {
-        string CODMUN PK "Código do município"
-        string MUNICIPIO "Nome do município"
-        string UF "Unidade Federativa"
+        string CODMUN PK
+        string MUNICIPIO
+        string UF
     }
-
+    
     cid_10_gold {
-        string SUBCAT PK "Código da causa da morte"
-        string DESCRICAO "Descrição da causa"
+        string SUBCAT PK
+        string DESCRICAO
     }
-
+    
     circunstancia_gold {
-        string COD_CIRC PK "Código da circunstância da morte"
-        string DESCR_CIRC "Descrição da circunstância"
+        string COD_CIRC PK
+        string DESCR_CIRC
     }
-
+    
     local_obito_gold {
-        string COD_LOCAL PK "Código do local"
-        string DESCR_LOCAL "Descrição"
+        string COD_LOCAL PK
+        string DESCR_LOCAL
     }
-
+    
     estado_civil_gold {
-        string COD_ESTCIVIL PK "Código do estado civil"
-        string DESCR_ESTADO "Descrição"
+        string COD_ESTCIVIL PK
+        string DESCR_ESTADO
     }
-
+    
     sexo_gold {
-        string COD_SEXO PK "Código do sexo"
-        string DESCR_SEXO "Descrição"
+        string COD_SEXO PK
+        string DESCR_SEXO
     }
-
+    
     cor_gold {
-        string COD_COR PK "Código da cor/raça"
-        string DESCR_COR "Descrição"
+        string COD_COR PK
+        string DESCR_COR
     }
-
-    %% Tabela Fato Principal
+    
     mortalidade_geral_gold {
-        string ACIDTRAB "Acidente de trabalho?"
-        string ASSISTMED "Teve assistência médica?"
-        date DTOBITO "Data do óbito"
-        string HORAOBITO "Hora do óbito"
-        string IDADE_GRUPO "Grupo etário"
-        string IDADE_QTD "Idade quantitativa"
-        
-        %% Foreign Keys
-        string CAUSABAS FK "Causa da morte (CID-10)"
-        string CIRCOBITO FK "Circunstância do óbito"
-        string CODMUNOCOR FK "Município de ocorrência"
-        string ESTCIV FK "Estado civil"
-        string LOCOCOR FK "Local do óbito"
-        string RACACOR FK "Cor/Raça"
-        string SEXO FK "Sexo"
+        string ACIDTRAB
+        string ASSISTMED
+        string CAUSABAS FK
+        string CIRCOBITO FK
+        string CODMUNOCOR FK
+        date DTOBITO
+        string ESTCIV FK
+        string HORAOBITO
+        string IDADE_GRUPO
+        string IDADE_QTD
+        string LOCOCOR FK
+        string RACACOR FK
+        string SEXO FK
     }
 
     %% Relacionamentos
