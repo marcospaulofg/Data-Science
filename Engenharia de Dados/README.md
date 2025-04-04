@@ -202,7 +202,71 @@ Relaciona o código do local de óbito com sua descrição. Suas colunas são:
 
 _____
 
+## 3.3 Diagrama Entidade Relacionamento
 
+```mermaid
+erDiagram
+    %% Entidades (Tabelas de Dimensão)
+    municipios_gold {
+        string CODMUN PK "Código do município"
+        string MUNICIPIO "Nome do município"
+        string UF "Unidade Federativa"
+    }
 
+    cid_10_gold {
+        string SUBCAT PK "Código da causa da morte"
+        string DESCRICAO "Descrição da causa"
+    }
 
+    circunstancia_gold {
+        string COD_CIRC PK "Código da circunstância da morte"
+        string DESCR_CIRC "Descrição da circunstância"
+    }
 
+    local_obito_gold {
+        string COD_LOCAL PK "Código do local"
+        string DESCR_LOCAL "Descrição"
+    }
+
+    estado_civil_gold {
+        string COD_ESTCIVIL PK "Código do estado civil"
+        string DESCR_ESTADO "Descrição"
+    }
+
+    sexo_gold {
+        string COD_SEXO PK "Código do sexo"
+        string DESCR_SEXO "Descrição"
+    }
+
+    cor_gold {
+        string COD_COR PK "Código da cor/raça"
+        string DESCR_COR "Descrição"
+    }
+
+    %% Tabela Fato Principal
+    mortalidade_geral_gold {
+        string ACIDTRAB "Acidente de trabalho?"
+        string ASSISTMED "Teve assistência médica?"
+        date DTOBITO "Data do óbito"
+        string HORAOBITO "Hora do óbito"
+        string IDADE_GRUPO "Grupo etário"
+        string IDADE_QTD "Idade quantitativa"
+        
+        %% Foreign Keys
+        string CAUSABAS FK "Causa da morte (CID-10)"
+        string CIRCOBITO FK "Circunstância do óbito"
+        string CODMUNOCOR FK "Município de ocorrência"
+        string ESTCIV FK "Estado civil"
+        string LOCOCOR FK "Local do óbito"
+        string RACACOR FK "Cor/Raça"
+        string SEXO FK "Sexo"
+    }
+
+    %% Relacionamentos
+    municipios_gold ||--o{ mortalidade_geral_gold : "CODMUNOCOR"
+    cid_10_gold ||--o{ mortalidade_geral_gold : "CAUSABAS"
+    circunstancia_gold ||--o{ mortalidade_geral_gold : "CIRCOBITO"
+    local_obito_gold ||--o{ mortalidade_geral_gold : "LOCOCOR"
+    estado_civil_gold ||--o{ mortalidade_geral_gold : "ESTCIV"
+    sexo_gold ||--o{ mortalidade_geral_gold : "SEXO"
+    cor_gold ||--o{ mortalidade_geral_gold : "RACACOR"
