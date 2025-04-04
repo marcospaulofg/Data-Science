@@ -102,7 +102,7 @@ O esquema estrela do projeto foi construído com uma tabela fato principal conte
 
 ## 3.2 Catálogo de Dados
 
-Tabela `mortalidade_geral_gold`:
+### Tabela `mortalidade_geral_gold`
 
 A tabela fato foi criada a partir da base original do SIM, que continha 132 colunas. Durante o processo de ETL, foram removidos campos irrelevantes, resultando em uma estrutura mais enxuta e otimizada para análise. São eles:
 
@@ -123,7 +123,7 @@ A tabela fato foi criada a partir da base original do SIM, que continha 132 colu
 | `SEXO` | Código do sexo do falecido. | string | 1 | 1; 2; 9 | `sexo_gold.COD_SEXO` |
 ___
 
-Tabela `cid_10_gold`:
+### Tabela `cid_10_gold`
 
 Relaciona os códigos da CID-10 com a descrição das doenças e causas de mortalidade. Sua colunas são:
 
@@ -134,7 +134,7 @@ Relaciona os códigos da CID-10 com a descrição das doenças e causas de morta
 
 ___
 
-Tabela `circunstancia_gold`:
+### Tabela `circunstancia_gold`
 
 Relaciona o código do tipo de morte com sua descrição. Suas colunas são:
 
@@ -147,7 +147,7 @@ Relaciona o código do tipo de morte com sua descrição. Suas colunas são:
 
 ___
 
-Tabela `municipios_gold`:
+### Tabela `municipios_gold`
 
 Contém os códigos e nomes dos municípios e estados do Brasil. Suas colunas são:
 
@@ -159,7 +159,7 @@ Contém os códigos e nomes dos municípios e estados do Brasil. Suas colunas s�
 
 ___
 
-Tabela `estado_civil_gold`:
+### Tabela `estado_civil_gold`
 
 Armazena o código e sua descrição de estado civil. Suas colunas são:
 
@@ -169,7 +169,7 @@ Armazena o código e sua descrição de estado civil. Suas colunas são:
 |     | `DESCR_ESTADO`      | Descrição da situação conjugal do falecido informada pelos familiares. | string   | 5 a 33   | Solteiro; Casado; Viúvo; Separado judicialmente/divorciado; União estável; Ignorado. | - |
 ___
 
-Tabela `sexo_gold`:
+### Tabela `sexo_gold`
 
 Relaciona o sexo do falecido com seu código. Suas colunas são:
 
@@ -180,7 +180,7 @@ Relaciona o sexo do falecido com seu código. Suas colunas são:
 
 ___
 
-Tabela `cor_gold`:
+### Tabela `cor_gold`
 
 Relaciona a raça/cor do falecido com seu código. Suas colunas são:
 
@@ -191,7 +191,7 @@ Relaciona a raça/cor do falecido com seu código. Suas colunas são:
 
 ___
 
-Tabela `local_obito_gold`:
+### Tabela `local_obito_gold`
 
 Relaciona o código do local de óbito com sua descrição. Suas colunas são:
 
@@ -267,3 +267,13 @@ erDiagram
     estado_civil_gold ||--o{ mortalidade_geral_gold : "ESTCIV"
     sexo_gold ||--o{ mortalidade_geral_gold : "SEXO"
     cor_gold ||--o{ mortalidade_geral_gold : "RACACOR"
+
+```
+
+# 4️⃣ Carga
+Esta seção está dentro do notebook.
+
+# 5️⃣ Análise
+Esta seção está dentro do notebook.
+
+# 6️⃣ Autoavaliação
