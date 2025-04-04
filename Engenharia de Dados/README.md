@@ -96,9 +96,9 @@ O esquema estrela do projeto foi construído com uma tabela fato principal conte
   
   - Esta tabela contém os registros de óbitos e é o núcleo central do esquema. Cada linha representa um óbito registrado, com detalhes como data, local, causa da morte e características da pessoa falecida.
 
-  📊 Tabelas Dimensão:
+  📊 Tabelas Dimensão: `municipios_gold`, `cid_10_gold`, `circunstancia_gold`, `local_obito_gold`, `estado_civil_gold`, `sexo_gold` e `cor_gold`.
 
-  - Foram criadas tabelas auxiliares para armazenar descrições de variáveis categóricas e facilitar a análise por meio de junções (joins) entre as tabelas. São elas: `municipios_gold`, `cid_10_gold`, `circunstancia_gold`, `local_obito_gold`, `estado_civil_gold`, `sexo_gold` e `cor_gold`.
+  - Foram criadas tabelas auxiliares para armazenar descrições de variáveis categóricas e facilitar a análise por meio de junções (joins) entre as tabelas.
 
 ## 3.2 Catálogo de Dados
 
