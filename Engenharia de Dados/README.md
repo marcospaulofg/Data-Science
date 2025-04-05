@@ -277,3 +277,41 @@ Esta seção está dentro do notebook.
 Esta seção está dentro do notebook.
 
 # 6️⃣ Autoavaliação
+
+## 6.1 Atingimento dos Objetivos
+  O objetivo principal deste projeto foi a construção de um pipeline de dados na nuvem utilizando o Databricks, desde a ingestão até a análise dos dados de mortalidade no Brasil, extraídos do Sistema de Informações sobre Mortalidade (SIM). Para isso, fizemos:
+  
+  - As etapas de busca e coleta dos dados necessários na internet;
+  - Modelamos esses dados em um esquema estrela, com uma tabela fato e sete tabelas dimensões, demonstrando esse esquema com um Diagrama Entidade Relacionamento e com um Catálogo de Dados para cada tabela;
+  - Carregamos os dados no Databricks e transformamo-los em tabelas Delta, facilitando seu manuseio atráves do Delta Lake e uso do Spark e consultas SQL;
+  - Fizemos análises dos dados e respondemos todas as perguntas elencadas no início do projeto através da união de queries SQL e demonstrações gráficas usando as bibliotecas Matplotlib e Seaborn, trazendo uma visão consolidada e acessível dos dados de mortalidade no Brasil, que era o problema central que este MVP buscava resolver.
+
+  Dito isso, acredito que os objetivos delineados no início do projeto foram atingidos com sucesso. No entanto, algumas melhorias podem ser feitas para aumentar ainda mais o impacto do trabalho, conforme será explicitado na seção 6.3.
+
+  Por fim, posso dizer que este projeto proporcionou uma experiência prática enriquecedora com o uso de Databricks e suas funcionalidades, modelagem de dados e análise exploratória de grandes volumes de dados. 
+
+
+## 6.2 Dificuldades Encontradas
+  As dificuldades encontradas no projeto foram básicamente sobre o tratamento dos dados, discorridos na seção 5.A - Qualidade dos dados. Em suma o dataset do SIM é disponibilizado sem um refinamento dos dados antes, possuindo valores não condizentes com com os esperados em suas colunas.
+
+  Apesar disso, esse tratamento dos dados é esperado em qualquer projeto de análise de dados, portanto não pode-se se chamar exatamente de uma dificuldade, porém foi o único ponto a ser abordado como mais próximo de uma dificuldade.
+
+
+## 6.3 Trabalhos Futuros
+O projeto pode ser aprimorado da seguinte forma:
+
+- Aumentar a base de dados:
+
+  O SIM tem um registro de óbitos no Brasil desde 1979. Seria interessante expandir essa base ao projeto, tendo assim uma disponibilidade maior de informações, e consequentemente, melhores insights sobre a evolução da taxa de mortalidade no país.
+
+- Automação do Pipeline:
+
+  Automatizar a ingestão dos dados, criando um processo de ingestão e atualização contínua dos dados.
+
+- Dashboard Interativo:
+
+  Criar uma interface visual interativa em um software que sirva para essa finalidade, como por exemplo, o Microsoft Power BI, facilitando a exploração dos dados por diferentes públicos.
+
+- Implementação de Modelos Preditivos:
+
+  Utilizar Machine Learning para prever padrões de mortalidade com base em variáveis históricas.
