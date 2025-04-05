@@ -46,7 +46,7 @@ A tabela fato do projeto, denominada `mortalidade_geral_gold`, foi construída a
 
 🔗 Fonte: Sistema de Informações sobre Mortalidade (SIM) – OpenDataSUS (https://opendatasus.saude.gov.br/dataset/sim)
 
-Os arquivos foram baixados manualmente, ano a ano, no formato CSV, e posteriormente feito o upload no DBFS do Databricks.
+Os arquivos foram baixados manualmente, ano a ano, no formato CSV, e posteriormente feito o upload no DBFS do Databricks. Vale ressaltar que o ano de 2024 é uma prévia, ou seja, não está completo até a data de hoje (11/04/2025), segundo a fonte.
 
 2.2 Tabelas Dimensão
 
