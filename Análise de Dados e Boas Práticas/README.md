@@ -1,5 +1,4 @@
 # 1️⃣ Definição do problema
-___
 
 ## 1.1 - Dataset
 
@@ -95,7 +94,6 @@ Segue um esquema fornecido pela própria Olist para identificação das relaçõ
 ![Alt text](https://i.imgur.com/HRhd2Y0.png "a title")
 
 # 2️⃣ Análise de dados
-___
 
 Vamos inicar o projeto entendendo as informações disponíveis no dataset. Para isso, faremos algumas análises básicas e estatísticas como:
 
@@ -111,7 +109,6 @@ Vamos inicar o projeto entendendo as informações disponíveis no dataset. Para
   - Verificar a correlação entre todas as variáveis com a matriz de correlação.
 
  # 3️⃣ Pré-processamento de dados
-___
 
 Agora iremos realizar operações de limpeza, tratamento e preparação dos dados. Para isso faremos:
 
@@ -123,7 +120,8 @@ Agora iremos realizar operações de limpeza, tratamento e preparação dos dado
 - Técnicas de transformação como padronização e transformações logarítmicas
 
 # 4️⃣ Conclusão
-___
+
+## 4.1 - Revisão
 
 O objetivo central deste projeto foi realizar uma análise exploratória e um pré-processamento completo em um dataset de e-commerce da Olist, com o intuito de preparar os dados para a futura tarefa de prever a satisfação do cliente, separados em três categorias ('Insatisfeito', 'Indiferente' e 'Satisfeito'), através do treinamento de algum modelo de machine learning.
 
@@ -141,7 +139,7 @@ Durante o pré-processamento realizamos algumas etapas, como:
 4. Aplicamos a técnica SMOTE no conjunto de treino, aumentando artificialmente a quantidade de registros das classes minoritárias, gerando um conjunto de dados de treinamento perfeitamente balanceado, evitando que o modelo treinado venha a sofrer overfitting para a classe 'Satisfeito'.
 5. Além de todo o tratamento de valores nulos, duplicados e inconsistentes.
 
-## 4.1 - Possíveis melhorias
+## 4.2 - Possíveis melhorias
 
 Poderíamos adicionar algumas hipóteses iniciais, como:
 
@@ -149,7 +147,7 @@ Poderíamos adicionar algumas hipóteses iniciais, como:
 
 2. Outra hipótese poderia ser sobre a avaliação do cliente estar vinculada a utilização de um cupom de desconto ou não. A ideia é semelhante à hipótese 4: no caso de receber um desconto, o cliente pode ter uma percepção de "bom negócio", tornando-o mais tolerante a pequenas falhas no processo, resultando em avaliações mais altas.
 
-## 4.2 - Considerações finais
+## 4.3 - Considerações finais
 
 Algumas hipóteses iniciais que tivemos no início do projeto foram descartadas ao analisarmos as estatísticas e plotarmos alguns gráficos dos dados, porém é importante perceber que obtivemos essas respostas devido ao desbalanceamento dos dados. Talvez se o dataset não estivesse não enviesado para notas 5 estrelas, teríamos uma conclusão diferente na análise.
 
