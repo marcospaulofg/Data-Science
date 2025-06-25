@@ -25,7 +25,7 @@ Aqui estão alguns dos projetos disponíveis neste repositório:
 
 **Projeto 2 - Análise de índices de mortalidade no Brasil**: Este projeto tem como objetivo construir um pipeline de dados na nuvem para analisar dados de mortalidade no Brasil, utilizando tecnologias em nuvem com Databricks e seu Delta Lake. O pipeline envolverá as etapas de busca, coleta, modelagem, carga e análise dos dados, com o propósito de fornecer insights sobre padrões de mortalidade no país. 💀
 
-[Projeto 3]: Em breve um projeto de Análise de Dados.
+**Projeto 3 - Análise de satisfação do cliente**: O objetivo central deste projeto foi realizar uma análise exploratória e um pré-processamento completo em um dataset de e-commerce da Olist, com o intuito de preparar os dados para uma futura tarefa de prever a satisfação do cliente através do treinamento de algum modelo de Machine Learning. ⭐
 
 ## Contato
 Se você tiver dúvidas ou quiser entrar em contato, envie um e-mail para marcospaulofg@gmail.com ou abra uma issue no repositório. ✉️
