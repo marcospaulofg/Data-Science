@@ -8,7 +8,7 @@ O dataset deste MVP será um conjunto de dados públicos de e-commerce brasileir
 
 Visto que um dos principais desafios de qualquer comércio é garantir a satisfação do cliente, este projeto visa analisar os fatores que influenciam essa satisfação em compras online.
 
-O problema central será preparar os dados para futuramente construir um modelo capaz de prever se um cliente ficará satisfeito (dando uma nota de avaliação alta) ou insatisfeito (dando uma nota baixa) com base nas características do seu pedido.
+O problema central será preparar os dados para futuramente construir um modelo capaz de prever se um cliente ficará satisfeito (dando uma nota de avaliação alta), insatisfeito (dando uma nota baixa) ou indiferente (dando uma nota intermediária) com base nas características do seu pedido.
 
 ## 1.3 - Tipo de problema
 
