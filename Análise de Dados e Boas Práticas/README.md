@@ -107,6 +107,8 @@ Vamos inicar o projeto entendendo as informações disponíveis no dataset. Para
   - Verificar a distribuição dos atributo com histogramas e gráficos de contagem;
   - Analisar a relação entre as variáveis preditoras e variável alvo com boxplots;
   - Verificar a correlação entre todas as variáveis com a matriz de correlação.
+ 
+## Todo o código e visualizações desta seção estão dentro do notebook.
 
  # 3️⃣ Pré-processamento de dados
 
@@ -118,6 +120,8 @@ Agora iremos realizar operações de limpeza, tratamento e preparação dos dado
 - Feature selection;
 - Divisão do conjunto entre treino e teste;
 - Técnicas de transformação como padronização e transformações logarítmicas
+
+## Todo o código e visualizações desta seção estão dentro do notebook.
 
 # 4️⃣ Conclusão
 
