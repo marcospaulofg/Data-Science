@@ -153,8 +153,10 @@ Poderíamos adicionar algumas hipóteses iniciais, como:
 
 ## 4.3 - Considerações finais
 
-Algumas hipóteses iniciais que tivemos no início do projeto foram descartadas ao analisarmos as estatísticas e plotarmos alguns gráficos dos dados, porém é importante perceber que obtivemos essas respostas devido ao desbalanceamento dos dados. Talvez se o dataset não estivesse não enviesado para notas 5 estrelas, teríamos uma conclusão diferente na análise.
+Algumas hipóteses iniciais que tivemos no início do projeto foram descartadas ao analisarmos as estatísticas e plotarmos alguns gráficos dos dados, porém é importante perceber que obtivemos essas respostas devido ao desbalanceamento dos dados. Talvez se o dataset não estivesse não enviesado para notas 5 estrelas, teríamos uma conclusão diferente na análise. Esse desbalanceamento foi o principal "vilão" em nossa análise.
 
-Vale ressaltar que é válido realizar o treinamento do modelo tanto com os dados balanceados (X_train_balanced, y_train_balanced) quanto com os dados desbalanceados (X_train_processed, y_train), para validarmos a eficácia da utlização do SMOTE.
+Outro ponto que vale ressaltar é que talvez esse dataset não seja o mais apropriado para servir de base para o treinamento de um modelo que visa prever a satisfação do cliente. Porém só pudemos tirar essa conclusão após fazermos as análises de cada feature do dataset, onde vimos a correlação entre features e target muito baixa.
+
+Vale ressaltar que é válido realizar o treinamento do modelo tanto com os dados balanceados (`X_train_balanced` e `y_train_balanced`) quanto com os dados desbalanceados (`X_train_processed` e `y_train`), para validarmos a eficácia da utlização do `SMOTE`.
 
 Dessa forma, avalio que este projeto executou com sucesso todo o ciclo de vida da preparação de dados, entregando as análises necessárias e preparando os dados para a etapa seguinte, que seria treinar e avaliar diferentes algoritmos de classificação para, enfim, extrair valor preditivo dos dados.
